@@ -20,3 +20,38 @@ function dataValidation (){
         modal.style.display ="none"
     }, 3000)
 }
+
+
+    let userNameMessage = document.querySelector('.username-validation')
+let passwordMessage = document.querySelector('.password-validation')
+
+// let users = document.querySelector('.username')
+// let pass = document.querySelector('.password')
+
+function usernameValidation (){
+    // alert('hi')
+    if (userNameInput.value.length < 12) {
+        userNameMessage.style.color = 'red'
+        userNameMessage.innerHTML = 'Must Contain 12 Character (Min)'
+        userNameMessage.style.display = 'block'
+      
+    } else {
+        userNameMessage.style.color = 'green'
+        userNameMessage.innerHTML = 'Correct Username Value'
+        userNameMessage.style.display = 'block'
+    }  
+}
+function passwordValidation () {
+    // alert('hi')
+    if (passwordInput.value.length < 8){
+        passwordMessage.style.color = 'red'
+        passwordMessage.innerHTML = 'Must Contain 8 Character (Min)'
+        passwordMessage.style.display = 'block'
+    } else {
+        passwordMessage.style.color = 'green'
+        passwordMessage.innerHTML = 'Correct Password value'
+        passwordMessage.style.display = 'block'
+    }
+}
+
+
